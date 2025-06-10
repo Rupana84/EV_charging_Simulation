@@ -1,0 +1,98 @@
+[2025-06-07 14:52:44] Simulation started in LOAD mode
+[2025-06-07 14:52:44] Battery discharged to 20%
+[2025-06-07 14:52:45] Prices and base loads loaded
+[2025-06-07 14:52:45] Hour 00: Charging started
+[2025-06-07 14:52:45] Hour 00 → Load: 0.88 kW, Price: 85.28, Battery: 20.00%, Charging: False
+[2025-06-07 14:52:47] Hour 01 → Load: 0.77 kW, Price: 70.86, Battery: 27.99%, Charging: True
+[2025-06-07 14:52:49] Hour 02 → Load: 2.20 kW, Price: 68.01, Battery: 35.98%, Charging: True
+[2025-06-07 14:52:51] Hour 03 → Load: 1.98 kW, Price: 67.95, Battery: 43.97%, Charging: True
+[2025-06-07 14:52:53] Hour 04 → Load: 2.75 kW, Price: 68.01, Battery: 51.97%, Charging: True
+[2025-06-07 14:52:55] Hour 05 → Load: 3.85 kW, Price: 85.04, Battery: 59.96%, Charging: True
+[2025-06-07 14:52:57] Hour 06 → Load: 4.51 kW, Price: 87.86, Battery: 67.95%, Charging: True
+[2025-06-07 14:52:59] Hour 07 → Load: 3.74 kW, Price: 100.26, Battery: 75.94%, Charging: True
+[2025-06-07 14:53:01] Hour 08: Charging stopped
+[2025-06-07 14:53:01] Hour 08 → Load: 3.85 kW, Price: 118.45, Battery: 83.93%, Charging: True
+[2025-06-07 14:53:03] Hour 09 → Load: 4.40 kW, Price: 116.61, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:05] Hour 10 → Load: 4.73 kW, Price: 105.93, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:07] Hour 11 → Load: 6.16 kW, Price: 91.95, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:09] Hour 12 → Load: 4.62 kW, Price: 90.51, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:11] Hour 13 → Load: 3.74 kW, Price: 90.34, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:13] Hour 14 → Load: 3.52 kW, Price: 90.80, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:15] Hour 15 → Load: 3.63 kW, Price: 88.85, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:17] Hour 16 → Load: 5.83 kW, Price: 90.39, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:19] Hour 17 → Load: 11.00 kW, Price: 99.03, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:21] Hour 18 → Load: 8.91 kW, Price: 87.11, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:23] Hour 19 → Load: 6.05 kW, Price: 82.90, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:25] Hour 20 → Load: 4.29 kW, Price: 80.45, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:27] Hour 21 → Load: 2.64 kW, Price: 76.48, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:29] Hour 22 → Load: 1.87 kW, Price: 32.00, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:31] Hour 23 → Load: 0.99 kW, Price: 34.29, Battery: 83.93%, Charging: False
+[2025-06-07 14:53:33] Final Battery Charge: 83.93%
+[2025-06-07 14:53:33] Simulation completed.
+
+[2025-06-10 15:48:48] Simulation started in LOAD mode
+[2025-06-10 15:48:48] Battery discharged to 20%
+[2025-06-10 15:48:49] Prices and base loads loaded
+[2025-06-10 15:48:49] Hour 00: Charging started
+[2025-06-10 15:48:49] Hour 00 → Load: 0.88 kW, Price: 85.28, Battery: 20.00%, Charging: False
+[2025-06-10 15:48:51] Hour 01 → Load: 0.77 kW, Price: 70.86, Battery: 27.99%, Charging: True
+[2025-06-10 15:48:53] Hour 02 → Load: 2.20 kW, Price: 68.01, Battery: 35.98%, Charging: True
+[2025-06-10 15:48:55] Hour 03 → Load: 1.98 kW, Price: 67.95, Battery: 43.97%, Charging: True
+[2025-06-10 15:48:57] Hour 04 → Load: 2.75 kW, Price: 68.01, Battery: 51.97%, Charging: True
+[2025-06-10 15:48:59] Hour 05 → Load: 3.85 kW, Price: 85.04, Battery: 59.96%, Charging: True
+[2025-06-10 15:49:01] Hour 06 → Load: 4.51 kW, Price: 87.86, Battery: 67.95%, Charging: True
+[2025-06-10 15:49:03] Hour 07 → Load: 3.74 kW, Price: 100.26, Battery: 75.94%, Charging: True
+[2025-06-10 15:49:05] Hour 08: Charging stopped
+[2025-06-10 15:49:05] Hour 08 → Load: 3.85 kW, Price: 118.45, Battery: 83.93%, Charging: True
+[2025-06-10 15:49:07] Hour 09 → Load: 4.40 kW, Price: 116.61, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:10] Hour 10 → Load: 4.73 kW, Price: 105.93, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:12] Hour 11 → Load: 6.16 kW, Price: 91.95, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:14] Hour 12 → Load: 4.62 kW, Price: 90.51, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:16] Hour 13 → Load: 3.74 kW, Price: 90.34, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:18] Hour 14 → Load: 3.52 kW, Price: 90.80, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:20] Hour 15 → Load: 3.63 kW, Price: 88.85, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:22] Hour 16 → Load: 5.83 kW, Price: 90.39, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:24] Hour 17 → Load: 11.00 kW, Price: 99.03, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:26] Hour 18 → Load: 8.91 kW, Price: 87.11, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:28] Hour 19 → Load: 6.05 kW, Price: 82.90, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:30] Hour 20 → Load: 4.29 kW, Price: 80.45, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:32] Hour 21 → Load: 2.64 kW, Price: 76.48, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:34] Hour 22 → Load: 1.87 kW, Price: 32.00, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:36] Hour 23 → Load: 0.99 kW, Price: 34.29, Battery: 83.93%, Charging: False
+[2025-06-10 15:49:38] Final Battery Charge: 83.93%
+[2025-06-10 15:49:38] Simulation completed.
+
+[2025-06-10 15:50:52] Simulation started in PRICE mode
+[2025-06-10 15:50:52] Battery discharged to 20%
+[2025-06-10 15:50:53] Prices and base loads loaded
+[2025-06-10 15:50:53] Cheapest hours (price mode): [22, 23, 3, 2, 4, 1, 21, 20]
+[2025-06-10 15:50:53] Hour 00 → Load: 0.88 kW, Price: 85.28, Battery: 20.00%, Charging: False
+[2025-06-10 15:50:55] Hour 01: Charging started
+[2025-06-10 15:50:55] Hour 01 → Load: 0.77 kW, Price: 70.86, Battery: 20.00%, Charging: False
+[2025-06-10 15:50:57] Hour 02 → Load: 2.20 kW, Price: 68.01, Battery: 27.99%, Charging: True
+[2025-06-10 15:50:59] Hour 03 → Load: 1.98 kW, Price: 67.95, Battery: 35.98%, Charging: True
+[2025-06-10 15:51:01] Hour 04 → Load: 2.75 kW, Price: 68.01, Battery: 43.97%, Charging: True
+[2025-06-10 15:51:03] Hour 05: Charging stopped
+[2025-06-10 15:51:03] Hour 05 → Load: 3.85 kW, Price: 85.04, Battery: 51.97%, Charging: True
+[2025-06-10 15:51:05] Hour 06 → Load: 4.51 kW, Price: 87.86, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:07] Hour 07 → Load: 3.74 kW, Price: 100.26, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:09] Hour 08 → Load: 3.85 kW, Price: 118.45, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:11] Hour 09 → Load: 4.40 kW, Price: 116.61, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:13] Hour 10 → Load: 4.73 kW, Price: 105.93, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:15] Hour 11 → Load: 6.16 kW, Price: 91.95, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:17] Hour 12 → Load: 4.62 kW, Price: 90.51, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:19] Hour 13 → Load: 3.74 kW, Price: 90.34, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:21] Hour 14 → Load: 3.52 kW, Price: 90.80, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:23] Hour 15 → Load: 3.63 kW, Price: 88.85, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:25] Hour 16 → Load: 5.83 kW, Price: 90.39, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:27] Hour 17 → Load: 11.00 kW, Price: 99.03, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:29] Hour 18 → Load: 8.91 kW, Price: 87.11, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:31] Hour 19 → Load: 6.05 kW, Price: 82.90, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:34] Hour 20: Charging started
+[2025-06-10 15:51:34] Hour 20 → Load: 4.29 kW, Price: 80.45, Battery: 51.97%, Charging: False
+[2025-06-10 15:51:36] Hour 21 → Load: 2.64 kW, Price: 76.48, Battery: 59.96%, Charging: True
+[2025-06-10 15:51:38] Hour 22 → Load: 1.87 kW, Price: 32.00, Battery: 67.95%, Charging: True
+[2025-06-10 15:51:40] Hour 23 → Load: 0.99 kW, Price: 34.29, Battery: 75.94%, Charging: True
+[2025-06-10 15:51:42] Final Battery Charge: 83.93%
+[2025-06-10 15:51:42] Simulation completed.
+
