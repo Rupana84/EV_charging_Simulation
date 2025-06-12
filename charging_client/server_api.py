@@ -1,38 +1,39 @@
-# charging_client/server_api.py
+import requests  # Library used to send HTTP requests to the Flask simulation server
 
-import requests  # For making HTTP requests to the simulated charging server
-
-# Base URL of the Flask-based EV charging simulation server
+# Base URL where the Flask-based EV charging simulation server is running
 BASE_URL = "http://127.0.0.1:5000"
 
 def safe_json(response):
-    """Safely parse JSON from a response or return fallback text/error.
-
+    """
+    Response or return fallback message.
     Handles:
-    - 200 OK with valid JSON → returns parsed data
-    - 200 OK but invalid JSON → returns warning with raw response
-    - Any other HTTP status → returns error dict with status code and raw text
+    - Valid JSON responses (status 200)
+    - Error status codes
     """
     if response.status_code == 200:
         try:
-            return response.json()
+            return response.json()  # Try to parse the response as JSON
         except Exception:
+            # Return raw response if JSON parsing fails
             return {"warning": "Response was not valid JSON", "raw": response.text}
     else:
+        # Return error if response code is not 200
         return {"error": f"HTTP {response.status_code}", "raw": response.text}
 
 
 def get_price_per_hour():
-    """Fetch hourly electricity prices (öre/kWh) from the server."""
-    response = requests.get(f"{BASE_URL}/priceperhour")
-    data = safe_json(response)
+    """
+    Get electricity prices for each hour of the day from the server.
+    Tries to parse as a list or convert dict to list.
+    """
+    response = requests.get(f"{BASE_URL}/priceperhour")  # Send GET request to server
+    data = safe_json(response)  # Parse response safely
 
-    # If the server returns a list of 24 prices, return as-is
     if isinstance(data, list):
-        return data
+        return data  # Return list directly if it is already a list
 
-    # If the server returns a dict (e.g., {"0": 85.28, ...}), convert to list
     elif isinstance(data, dict):
+        # Convert dictionary values to list by an hour key
         return [data[str(h)] for h in range(24)]
 
     else:
@@ -40,43 +41,64 @@ def get_price_per_hour():
 
 
 def get_baseload():
-    """Fetch household base loads (kW) for each hour of the day."""
-    response = requests.get(f"{BASE_URL}/baseload")
+    """
+    Get household base load values for each hour of the day.
+    Returns list of 24 values representing hourly kW usage.
+    """
+    response = requests.get(f"{BASE_URL}/baseload")  # GET request to /baseload
     data = safe_json(response)
 
     if isinstance(data, list):
-        return data
+        return data  # Return list if server gave a list
+
     elif isinstance(data, dict):
+        # Convert dictionary to list assuming keys "0" to "23"
         return [data[str(h)] for h in range(24)]
+
     else:
         raise ValueError("Unexpected response format from /baseload")
 
 
 def get_battery_percent():
-    """Fetch current battery charge level (%) from the server."""
-    response = requests.get(f"{BASE_URL}/charge")
-    return safe_json(response)
+    """
+    Get the current battery charge in percent.
+    Used for real-time battery status monitoring.
+    """
+    response = requests.get(f"{BASE_URL}/charge")  # GET request to /charge returns battery %
+    return safe_json(response)  # Return parsed response
 
 
 def get_info():
-    """Fetch detailed system info: battery %, current load, charging status, etc."""
-    response = requests.get(f"{BASE_URL}/info")
+    """
+    Get detailed system info from the simulation:
+    Includes battery %, base load, time, and charging status.
+    """
+    response = requests.get(f"{BASE_URL}/info")  # GET request to /info
     return safe_json(response)
 
 
 def start_charging():
-    """Send a POST request to the server to start charging the EV battery."""
-    response = requests.post(f"{BASE_URL}/charge", json={"charging": "on"})
+    """
+    Send a POST request to the server to start EV battery charging.
+    Tells the Flask server to turn on charging.
+    """
+    response = requests.post(f"{BASE_URL}/charge", json={"charging": "on"})  # POST with 'on'
     return safe_json(response)
 
 
 def stop_charging():
-    """Send a POST request to the server to stop charging the EV battery."""
-    response = requests.post(f"{BASE_URL}/charge", json={"charging": "off"})
+    """
+    Send a POST request to stop EV battery charging.
+    Tells the Flask server to stop charging activity.
+    """
+    response = requests.post(f"{BASE_URL}/charge", json={"charging": "off"})  # POST with 'off'
     return safe_json(response)
 
 
 def discharge_battery():
-    """Send a POST request to reset/discharge the battery to 20% and restart simulation clock."""
-    response = requests.post(f"{BASE_URL}/discharge", json={"discharging": "on"})
+    """
+    Reset or discharge the battery to 20% to begin simulation.
+    Also resets the simulated clock back to hour 0.
+    """
+    response = requests.post(f"{BASE_URL}/discharge", json={"discharging": "on"})  # POST to reset
     return safe_json(response)

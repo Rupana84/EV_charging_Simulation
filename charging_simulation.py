@@ -1,12 +1,12 @@
 #Written by Rikard Ed 2024-01-30
 
-#charging_simulation.py
+#Chargin    g_simulation.py
 #Använd simuleringen av en laddstation för en EV som är kopplat till ett hushåll. Den simulerade laddstationen finns som ett skript i Python och startar en webserver som svarar på anrop via JSON-protokollet. Skriv en applikation (i valfritt programmeringsspråk) som hämtar och sänder följande data.
 #1.	Hämta information om vilken effekt laddstationen klarar av
 #2.	Hämta information om hushållets förbrukning
 #3.	Skicka kommando för att starta och stoppa laddningen av EVs batteri. Laddningen skall starta när elpriset är som lägst och hushållets förbrukning inte överstiger 11 kW (trefas-16A) 3.6 kW (enfas 16A) 7.3 kW (enfas 32A) 6.9 kW (trefas 10 A)
 #4.	Avläs batteriets kapacitet och ladda batteriet från 20% till 80%
-#5. Skapa ett GUI eller använd ett terminalfönster(kommandoprompt) för att kommunicera med den simulerade 
+#5. Skapa ett GUI eller använd ett terminalfönster(kommandoprompt) för att kommunicera med den simulerade
 
 #1 Charging profile without energy price
 #2 charging profile with energy price
@@ -73,7 +73,7 @@ def main_prg():
         sim_hour=(sim_hour+1)%24
         sim_min=0
 
-#left as a default route    
+#left as a default route
 @app.route('/')
 def home():
     global ev_batt_capacity_kWh
@@ -180,7 +180,7 @@ def discharge_battery():
                     sim_min=0
                     output_data = {'discharging': 'on' }
                     return json.dumps(output_data)
-                
+
         except Exception as e:
             return jsonify({'error': str(e)})
     elif request.method == 'GET':
@@ -188,7 +188,7 @@ def discharge_battery():
         return jsonify({'message': 'This is a GET request. Use POST to reset the battery.'})
     else:
         return jsonify({'error': 'Unsupported HTTP method'})
-    
+
 # start the increment_sum thread
 increment_sum_thread = threading.Thread(target=main_prg)
 increment_sum_thread.start()
