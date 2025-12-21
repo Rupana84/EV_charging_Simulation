@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="body" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#e5ebf5"/>
+      <stop offset="100%" stop-color="#cad4e4"/>
+    </linearGradient>
+    <linearGradient id="shadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#03060c" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d2538"/>
+      <stop offset="100%" stop-color="#050910"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#shadowBlur)">
+    <ellipse cx="160" cy="150" rx="130" ry="26" fill="url(#shadow)"/>
+  </g>
+  <g>
+    <path d="M60 120 C65 70 120 35 160 35 C200 35 255 70 260 120 L260 140 C255 150 235 154 160 154 C85 154 65 150 60 140 Z" fill="#0f1624"/>
+    <path d="M70 118 C74 77 125 48 160 48 C195 48 246 77 250 118 L250 136 C246 144 230 148 160 148 C90 148 74 144 70 136 Z" fill="url(#body)"/>
+    <path d="M95 118 C103 86 135 66 160 66 C185 66 217 86 225 118 L225 132 C217 136 193 138 160 138 C127 138 103 136 95 132 Z" fill="url(#glass)"/>
+    <path d="M110 126 C120 110 200 110 210 126 L210 132 C198 134 178 135 160 135 C142 135 122 134 110 132 Z" fill="#0c111d" opacity="0.7"/>
+    <ellipse cx="110" cy="136" rx="18" ry="8" fill="#0c111d"/>
+    <ellipse cx="210" cy="136" rx="18" ry="8" fill="#0c111d"/>
+    <ellipse cx="100" cy="136" rx="8" ry="5" fill="#1f2432"/>
+    <ellipse cx="220" cy="136" rx="8" ry="5" fill="#1f2432"/>
+    <path d="M86 120 Q100 112 106 120" stroke="#7ad8ff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M234 120 Q220 112 214 120" stroke="#7ad8ff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M130 80 C140 70 180 70 190 80" stroke="#d3dae8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M130 88 C142 82 178 82 190 88" stroke="#9ca3af" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <defs>
+    <filter id="shadowBlur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8"/>
+    </filter>
+  </defs>
+</svg>
