@@ -1,1 +1,1 @@
-web: gunicorn backend.charging_simulation:app
+web: gunicorn charging_simulation:app
