@@ -332,8 +332,8 @@ export default function Dashboard() {
           fullStopRef.current = true;
           setLogs((prev) => [
             ...prev,
-            "⛔ Stopping charging... (battery reached 100%)",
-            `🔋 Battery reached 100% – charging stopped automatically.`,
+            " Stopping charging... (battery reached 100%)",
+            ` Battery reached 100% – charging stopped automatically.`,
           ]);
         }
       }
@@ -397,12 +397,12 @@ export default function Dashboard() {
         await apiStartCharging();
         isCharging = true;
         setCharging(true);
-        setLogs((prev) => [...prev, "✅ Starting charging..."]);
+        setLogs((prev) => [...prev, " Starting charging..."]);
       } else if (!shouldCharge && isCharging) {
         await apiStopCharging();
         isCharging = false;
         setCharging(false);
-        setLogs((prev) => [...prev, "⛔ Stopping charging..."]);
+        setLogs((prev) => [...prev, " Stopping charging..."]);
       }
 
       const info2 = await fetchInfo();
@@ -427,12 +427,12 @@ export default function Dashboard() {
       if (lastLoggedHourRef.current !== hourForLog) {
         lastLoggedHourRef.current = hourForLog;
 
-        const timeLine = `🕒 Simulated Time: Hour ${formatHour(hourForLog)}`;
-        const statusLine = `⚡ Base Load: ${baseLoad.toFixed(
+        const timeLine = ` Simulated Time: Hour ${formatHour(hourForLog)}`;
+        const statusLine = ` Base Load: ${baseLoad.toFixed(
           2
-        )} kW | 💰 Price: ${price.toFixed(2)} öre | 🔋 Battery: ${pct.toFixed(
+        )} kW |  Price: ${price.toFixed(2)} öre |  Battery: ${pct.toFixed(
           2
-        )}% | 🚗 Charging: ${isCharging ? "True" : "False"}`;
+        )}% |  Charging: ${isCharging ? "True" : "False"}`;
 
         setLogs((prev) => [...prev, timeLine, statusLine]);
       }
@@ -445,7 +445,7 @@ export default function Dashboard() {
         setRunning(false);
         setLogs((prev) => [
           ...prev,
-          `🔚 Final Battery Charge: ${pct.toFixed(2)}%`,
+          ` Final Battery Charge: ${pct.toFixed(2)}%`,
         ]);
       }
     } catch (e) {
@@ -467,9 +467,9 @@ export default function Dashboard() {
       fullStopRef.current = false;
       setLogs([
         `Select mode (load/price): ${mode}`,
-        `🔋 Starting Battery Management Simulation in ${mode.toUpperCase()} mode...`,
-        "⏮️  Discharging battery to 20%...",
-        "✅ Loaded electricity prices and base loads for 24h.",
+        ` Starting Battery Management Simulation in ${mode.toUpperCase()} mode...`,
+        "  Discharging battery to 20%...",
+        " Loaded electricity prices and base loads for 24h.",
       ]);
       lastLoggedHourRef.current = null;
       setRunning(true);
@@ -487,13 +487,13 @@ export default function Dashboard() {
       setCharging(false);
       setLogs((prev) => [
         ...prev,
-        "⛔ Auto simulation manually stopped. Charging halted.",
+        " Auto simulation manually stopped. Charging halted.",
       ]);
     } catch (e) {
       console.error("Failed to stop simulation", e);
       setLogs((prev) => [
         ...prev,
-        "⚠️ Auto simulation stopped but could not confirm charger shutdown.",
+        " Auto simulation stopped but could not confirm charger shutdown.",
       ]);
     }
   }
@@ -518,7 +518,7 @@ export default function Dashboard() {
       setCurrentLoad(loadsRef.current[h] ?? info.base_current_load ?? 0);
       setCurrentPrice(pricesRef.current[h] ?? 0);
 
-      setLogs((prev) => [...prev, "✅ Starting charging (MANUAL)..."]);
+      setLogs((prev) => [...prev, " Starting charging (MANUAL)..."]);
     } catch (e) {
       console.error("Manual start failed", e);
     }
@@ -544,7 +544,7 @@ export default function Dashboard() {
       setCurrentLoad(loadsRef.current[h] ?? info.base_current_load ?? 0);
       setCurrentPrice(pricesRef.current[h] ?? 0);
 
-      setLogs((prev) => [...prev, "⛔ Stopping charging (MANUAL)..."]);
+      setLogs((prev) => [...prev, " Stopping charging (MANUAL)..."]);
     } catch (e) {
       console.error("Manual stop failed", e);
     }
@@ -557,7 +557,7 @@ export default function Dashboard() {
       fullStopRef.current = false;
       setLogs((prev) => [
         ...prev,
-        "⏮️  Battery reset to 20% and clock set to 00:00.",
+        "  Battery reset to 20% and clock set to 00:00.",
       ]);
       lastLoggedHourRef.current = null;
 
