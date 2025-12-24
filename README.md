@@ -19,7 +19,7 @@ This project simulates the operation of an Electric Vehicle (EV) charging system
 - REST API communication with a simulated EV charging station
 - Discharges battery to 20% before simulation
 - Supports both **load** and **price** based charging strategies
-- Simulated time: 1 hour = 2 seconds
+- Simulated time: 1 hour = 10 seconds
 - Logs data in `charging_log.txt` (full terminal log) and `battery_log.csv` (summary table)
 - Tracks:
 
