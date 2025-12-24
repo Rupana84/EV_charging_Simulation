@@ -1,94 +1,126 @@
-# 🔋 Battery Management Simulation Project
 
-**Author**: Gurpreet Singh Rupana  
-**Date**: 2025-06-07
+# EV Charging Simulation
 
----
+EV Charging Simulation is a Python-based project that simulates the behavior of an electric vehicle charging system connected to a household power grid. The system demonstrates intelligent charging strategies using REST-based client server communication.
 
-## 📘 Overview
-
-This project simulates the operation of an Electric Vehicle (EV) charging system connected to a household. It uses a simulated server (via Flask) that responds to JSON requests and allows a Python-based client application to manage battery charging intelligently based on two strategies:
-
-- **Load-based Mode**: Charges when household load is below 11 kW.
-- **Price-based Mode**: Charges when electricity price is among the lowest 8 hours of the day.
+The project is just for showcasing skills in backend development, simulation logic, REST APIs, and data analysis.
 
 ---
 
-## Features Implemented
+## Project Overview
 
-- REST API communication with a simulated EV charging station
-- Discharges battery to 20% before simulation
-- Supports both **load** and **price** based charging strategies
-- Simulated time: 1 hour = 10 seconds
-- Logs data in `charging_log.txt` (full terminal log) and `battery_log.csv` (summary table)
-- Tracks:
+The system consists of two main parts:
 
-* Simulated hour
-* Base load
-* Electricity price
-* Battery % charge
-* Charging status
+1. A Flask-based simulation server that emulates an EV charging station.
+2. A Python client that interacts with the server and controls charging behavior.
 
-  **CSV plot** of battery charge level over time  
-  Daily statistics such as total charged hours
+The simulation runs on accelerated time, allowing long charging sessions to be tested quickly.
 
 ---
 
-## Files
+## Features
 
-| File                     | Description                                  |
-| ------------------------ | -------------------------------------------- |
-| `main.py`                | Main terminal-based simulation client        |
-| `server_api.py`          | Handles REST communication with server       |
-| `charging_simulation.py` | Simulated charging server (Flask)            |
-| `battery_log.csv`        | Summary of each hour's simulation data       |
-| `charging_log.txt`       | Detailed terminal log of simulation          |
-| `battery_plot.png`       | Line graph showing battery charge % over 24h |
-
----
-
-## Results Summary (Last Simulation)
-
-- **Total Charging Time**: 8 hours
-- **Initial Battery %**: 20.00
-- **Final Battery %**: 83.93
+- Flask based REST API for EV charging simulation
+- Client server architecture using HTTP requests
+- Two intelligent charging strategies:
+ - Load-based charging (based on household power usage)
+  - Price-based charging (based on electricity price patterns)
+- Simulated time progression (1 hour equals a few seconds)
+- Battery state tracking and logging
+- CSV and text-based log generation
+- Charging curve visualization using plots
 
 ---
 
-## Graph Example
+## Technology Stack
 
-Battery percentage increased during simulation. Refer to `battery_plot.png`.
-
-> **Tip:** You can open `battery_log.csv` in Excel or Numbers for detailed filtering or analysis.
+- Programming Language: Python
+- Backend Framework: Flask
+- HTTP Communication: requests
+- Data Processing: pandas
+- Visualization: matplotlib
+- Runtime: Python 3.8 or higher
 
 ---
 
-## How to Run
+## Repository Structure
 
-1. Run the simulated server (once):
+EV_charging_Simulation/
+├── backend/
+│   └── charging_simulation.py
+├── main.py
+├── server_api.py
+├── battery_log.csv
+├── charging_log.txt
+├── battery_plot.png
+└── README.md
 
-```bash
-python charging_simulation.py
-```
+---
 
-2. In another terminal, run the client app:
+## Installation and Setup
 
-```bash
+### Step 1: Clone the Repository
+
+git clone https://github.com/Rupana84/EV_charging_Simulation.git  
+cd EV_charging_Simulation
+
+### Step 2: Install Dependencies
+
+pip install flask requests pandas matplotlib
+
+### Step 3: Start the Simulation Server
+
+python backend/charging_simulation.py
+
+### Step 4: Run the Client
+
+Open a new terminal and run:
+
 python main.py
-```
 
-3. Choose your mode when prompted: `load` or `price`.
-
----
-
-## Requirements
-
-- Python 3.8+
-- Flask (for `charging_simulation.py`)
-- Requests
-- Pandas
-- Matplotlib
+Select the desired charging mode when prompted.
 
 ---
 
+## Output Files
+
+After running the simulation, the following files are generated:
+
+- battery_log.csv  
+  Contains time-based battery charge data and system states.
+
+- charging_log.txt  
+  Detailed charging and decision logs.
+
+- battery_plot.png  
+  Visual representation of battery charge progression.
+
 ---
+
+## Use Cases
+
+- Demonstrating EV charging logic and smart energy management
+- Simulating grid-aware charging strategies
+- Academic projects related to EV systems or energy optimization
+- Portfolio demonstration for backend and simulation development
+
+---
+
+## Future Improvements
+
+- Support for multiple vehicles
+- Real-time dashboard or GUI
+- Integration with live electricity pricing APIs
+- Extended battery health and temperature modeling
+
+---
+
+## Author
+
+Gurpreet Singh Rupana
+
+---
+
+## License
+
+This project is open for educational and demonstration purposes.
